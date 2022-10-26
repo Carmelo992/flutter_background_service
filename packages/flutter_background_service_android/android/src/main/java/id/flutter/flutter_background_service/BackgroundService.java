@@ -204,7 +204,7 @@ public class BackgroundService extends Service implements MethodChannel.MethodCa
     private void runService() {
         try {
             if (isRunning.get() || (backgroundEngine != null && !backgroundEngine.getDartExecutor().isExecutingDart())) {
-                Log.v(TAG, "Service already running, using existing service");
+                Log.v(TAG, "Service already running, using existing service " + isManuallyStopped);
                 return;
             }
 
